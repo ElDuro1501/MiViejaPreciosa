@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Reyna</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Dancing Script';
+      overflow: hidden;
+      background: #000;
+      color: white;
+    }
+
+    .fondo-texto {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3em;
+      text-align: center;
+      opacity: 0.2;
+      z-index: 1;
+    }
+
+    .collage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .foto {
+      position: absolute;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 2s ease, transform 2s ease;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      width: 300px;
+      height: auto;
+    }
+
+    .foto.mostrar {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Video final */
+    .video-final {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 3;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Texto de fondo -->
+  <div class="fondo-texto">
+    Para ti... con todo mi cariño 💖
+  </div>
+
+  <!-- Collage -->
+  <div class="collage">
+    <img src="ImagenesVideos/Arlette2.jpg" class="foto" id="foto1">
+    <img src="ImagenesVideos/Arlette5.jpg" class="foto" id="foto2">
+    <img src="imagenes/foto3.jpg" class="foto" id="foto3">
+    <!-- Puedes agregar más fotos si quieres -->
+  </div>
+
+  <!-- Video final encima de todo -->
+  <video class="video-final" id="videoFinal" autoplay muted>
+    <source src="video/videoamor.mp4" type="video/mp4">
+    Tu navegador no soporta el video 😥
+  </video>
+
+  <script>
+    const fotos = document.querySelectorAll('.foto');
+    const video = document.getElementById('videoFinal');
+
+    fotos.forEach((foto, index) => {
+      setTimeout(() => {
+        foto.classList.add('mostrar');
+      }, index * 3000); // 3 segundos entre cada imagen
+    });
+
+    // Esperamos a que terminen todas las imágenes antes de mostrar el video
+    setTimeout(() => {
+      video.style.display = 'block';
+    }, fotos.length * 3000 + 1000); // Tiempo total + 1s extra
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Vieja Preciosa</title>
+  
+  <!-- Fuentes bonitas desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #ffe6e6, #fff);
+      color: #333;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-family: 'Pacifico', cursive;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+      font-size: 23px;
+      font-family: 'Dancing Script';
+    }
+
+    .foto-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .foto-estilizada {
+      width: 300px;
+      border: 4px solid #4CAF50;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .foto-estilizada:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    /* CORAZONES ANIMADOS */
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 24px;
+      animation: floatUp 3s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    .heart:nth-child(2) {
+      left: 20%;
+      animation-delay: 1s;
+    }
+
+    .heart:nth-child(3) {
+      left: 60%;
+      animation-delay: 2s;
+    }
+
+    .heart:nth-child(4) {
+      left: 80%;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: 0;
+        opacity: 0;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.4);
+      }
+      100% {
+        bottom: 150px;
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+      font-family: 'Courgette', cursive;
+    }
+
+    a:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 TE QUIERO 💖</h1>
+
+  <p>
+    💌 Sabes, llevamos tan solo 1 semana hablando y conociéndonos
+    y ya te quiero tanto que no dejo de pensarte ni tan solo un segundo... 💭<br><br>
+    💘Sabes, tal vez sea muy raro para ti, soy muy sentimental, me gusta estar platicando
+    contigo 24/7, soy muy encimoso, no te dejo de molestar, etc...💘😅
+    Pero sabes algo, te quiero tanto que eres mi mundo en estos momentos,
+    mis pensamientos, mi tiempo y sobre todo mi amor... Todo eso te pertenece hoy y desde que te conocí...💌 
+  </p>
+
+  <!-- FOTO CON CORAZONES -->
+  <div class="foto-container">
+    <img src="ImagenesVideos/Arlette1.jpg" 
+         alt="Mi vieja y yo" 
+         title="Nuestra primera foto juntos, aunque ella no quisiera salir."
+         class="foto-estilizada">
+    <!-- Corazones animados -->
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+  </div>
+
+  <br>
+
+  <a href="pagina2.html">Aprieta aquí mi cielo...</a>
+</body>

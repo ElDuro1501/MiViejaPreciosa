@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Me Encantas Un Chingo</title>
+  
+  <!-- Fuentes bonitas desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #ffe6e6, #fff);
+      color: #333;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-family: 'Pacifico', cursive;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+      font-size: 23px;
+      font-family: 'Dancing Script';
+    }
+
+    .foto-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .foto-estilizada {
+      width: 300px;
+      border: 4px solid #4CAF50;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .foto-estilizada:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    /* CORAZONES ANIMADOS */
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 24px;
+      animation: floatUp 3s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    .heart:nth-child(2) {
+      left: 20%;
+      animation-delay: 1s;
+    }
+
+    .heart:nth-child(3) {
+      left: 60%;
+      animation-delay: 2s;
+    }
+
+    .heart:nth-child(4) {
+      left: 80%;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: 0;
+        opacity: 0;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.4);
+      }
+      100% {
+        bottom: 150px;
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+      font-family: 'Courgette', cursive;
+    }
+
+    a:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💗 TE NECESITO CONMIGO 💗</h1>
+
+  <p>
+    💔Me da miedo todo esto, el hecho de que vivamos lejos,
+     que no funcione tanto como queremos, que me dejes de querer, que te deje de
+     gustar,que nos lastimemos, que no podamos estar juntos y que la historia
+     se repita una 5ta vez...💔<br><br>
+     🥰Me duele pensar todo eso, pero por ti...Estoy dispuesto a aventarme
+     como gordo en tobogan y lo que tenga que pasar, por que eres
+     alguien que siempre quise, alguien que siempre me gusto y
+     alguien que siempre estuvo en mis pensamientos haciendo un desmadre...🥰<br><br>
+     😍💓Simplemente ve esta chulada de mujer...Eres perfecta...💓😍
+  </p>
+
+  <!-- FOTO CON CORAZONES -->
+  <div class="foto-container">
+    <img src="ImagenesVideos/Arlette3.jpg" 
+         alt="Mi niña la mas hermosa" 
+         title="La mujer mas hermosa del fucking mundo."
+         class="foto-estilizada">
+    <!-- Corazones animados -->
+    <div class="heart">😍</div>
+    <div class="heart">💞</div>
+    <div class="heart">🤍</div>
+  </div>
+
+  <br>
+
+  <a href="pagina3.html">Aprieta aquí mi cielo...</a>
+</body>

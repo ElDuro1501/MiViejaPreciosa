@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres ser mi novia?</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(135deg, #ffb6c1, #ffe6f0);
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      z-index: 2;
+      animation: pulse 2s infinite;
+    }
+
+    .emoji {
+      font-size: 4em;
+      margin-top: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    /* Animación corazones flotando */
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 2em;
+      animation: floatUp 6s infinite ease-in;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: -50px;
+        opacity: 0;
+        transform: translateX(0) scale(0.8);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(20px) scale(1.2);
+      }
+      100% {
+        bottom: 100vh;
+        opacity: 0;
+        transform: translateX(-20px) scale(0.8);
+      }
+    }
+
+    /* Animación del texto */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Animación emoji */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Texto principal -->
+  <h1>¿QUIERES SER MI NOVIA? 💕</h1>
+  <div class="emoji">😳🥰</div>
+
+  <!-- Corazones flotando -->
+  <div class="heart" style="left:10%;">❤️</div>
+  <div class="heart" style="left:25%; animation-delay:1s;">💖</div>
+  <div class="heart" style="left:40%; animation-delay:2s;">💕</div>
+  <div class="heart" style="left:60%; animation-delay:3s;">💓</div>
+  <div class="heart" style="left:75%; animation-delay:4s;">💞</div>
+  <div class="heart" style="left:90%; animation-delay:5s;">❤️</div>
+
+</body>
+</html>
