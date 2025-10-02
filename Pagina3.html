@@ -127,12 +127,15 @@
 
   <!-- Contenedor para video + botón -->
   <div id="contenedorFinal">
-    <video id="videoFinal" autoplay muted>
+      <!-- Video con controles, sin muted -->
+      <video id="videoFinal" controls>
       <source src="ImagenesVideos/ArletteVideoFinal.mp4" type="video/mp4">
       Tu navegador no soporta el video 😥
-    </video>
-    <a id="botonSiguiente" href="Pagina4.html">Ya el último click mi amor...</a>
-  </div>
+      </video>
+  
+  <!-- Botón debajo del video -->
+  <a id="botonSiguiente" href="Pagina4.html">Ya el último click mi amor...</a>
+</div>
 
   <script>
     const fotos = document.querySelectorAll('.foto');
